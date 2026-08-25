@@ -14,7 +14,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .bootstrap-clean/000.txt .bootstrap-clean/001.txt .bootstrap-clean/002.txt .bootstrap-clean/003.txt .bootstrap-clean/004.txt .bootstrap-clean/005.txt .bootstrap-clean/006.txt .bootstrap-clean/007.txt .bootstrap-clean/008a.txt .bootstrap-clean/008b.txt .bootstrap-clean/009.txt | tr -d '\r\n' | base64 -d > source.zip
+          cat .bootstrap-clean/000a.txt .bootstrap-clean/000b.txt .bootstrap-clean/001.txt .bootstrap-clean/002.txt .bootstrap-clean/003.txt .bootstrap-clean/004.txt .bootstrap-clean/005.txt .bootstrap-clean/006.txt .bootstrap-clean/007.txt .bootstrap-clean/008a.txt .bootstrap-clean/008b.txt .bootstrap-clean/009.txt | tr -d '\r\n' | base64 -d > source.zip
           echo "18017b897fcd0be7c557f32df1d47edeee733af5a9de662336dc182565a6ef9e  source.zip" | sha256sum -c -
           unzip -o source.zip
           rm -rf .bootstrap-clean .bootstrap .bootstrap-xz .bootstrap-parts .transfer
