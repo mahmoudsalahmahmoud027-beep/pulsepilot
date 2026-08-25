@@ -1,3 +1,0 @@
-# PulsePilot
-
-Source tree initialization.
